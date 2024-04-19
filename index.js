@@ -6,6 +6,11 @@ const promptInput = document.getElementById("prompt");
 const sendPromptBtn = document.getElementById("sendPrompt");
 
 async function run(prompt) {
+
+    // Show loading Overlay
+    document.getElementById("loadingOverlay").style.display = "flex";
+    promptInput.blur();
+
     // For text-only input, use the gemini-pro model
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
@@ -13,6 +18,10 @@ async function run(prompt) {
     const response = await result.response;
     const text = response.text();
     console.log(text);
+
+    // Hide loading Overlay
+    document.getElementById("loadingOverlay").style.display = "none";
+    promptInput.focus();
 }
 
 sendPromptBtn.addEventListener("click", ()=>{
