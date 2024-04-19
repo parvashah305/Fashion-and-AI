@@ -4,6 +4,8 @@ body{
     flex-direction: column-reverse;
     display: flex;
     overflow: hidden;
+    /* background: no-repeat; */
+    background-size: cover;
 }
 
 
@@ -38,4 +40,8 @@ body{
   font-weight: 500;
   font-style: normal;
   margin-bottom: 290px;
+  border: 1px solid black;
+  border-radius: 20px;
+  text-align: center;
+  border-style: none;
 }
