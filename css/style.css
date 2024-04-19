@@ -72,3 +72,36 @@ body {
   padding: 5px;
   border-radius: 40px;
 }
+
+#skinTone{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#skinTone div{
+  height: 100%;
+  min-width: 70px;
+}
+
+#skinTone div:hover{
+  height: 110%;
+  cursor: pointer;
+}
+
+#dark{
+  background-color: #8d5524;
+}
+#brown{
+  background-color: #c68642;
+}
+#medium{
+  background-color: #e0ac69;
+}
+#peach{
+  background-color: #f1c27d;
+}
+#fair{
+  background-color: #ffdbac;
+}
