@@ -4,6 +4,7 @@ const genAI = new GoogleGenerativeAI("AIzaSyAcEKsBcd3fOtWHx97mjD9Z8N5N_SEmZ_g");
 
 const promptInput = document.getElementById("prompt");
 const sendPromptBtn = document.getElementById("sendPrompt");
+const cp = document.querySelector("slider-color-picker");
 
 async function run(prompt) {
 
@@ -15,7 +16,7 @@ async function run(prompt) {
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
     const result = await model.generateContent(`improve this prompt so image generating ai can give me exactly what i want  "${prompt}"`);
-    console.log(`improve this prompt so image generating ai can give me exactly what i want  "${prompt}"`)
+    console.log(`improve this prompt so image generating ai can give me exactly what i want, "${prompt}, in ${cp.value} color"`)
     const response = await result.response;
     const text = response.text();
     console.log(text);
