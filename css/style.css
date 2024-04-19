@@ -2,5 +2,13 @@ body{
     background-color: black;
     flex-direction: column-reverse;
     display: flex;
-    
+}
+#prompt{
+    position: absolute;
+    bottom: 0;
+}
+#divInput{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
