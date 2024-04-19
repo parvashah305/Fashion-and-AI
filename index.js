@@ -14,7 +14,8 @@ async function run(prompt) {
     // For text-only input, use the gemini-pro model
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
-    const result = await model.generateContent(prompt);
+    const result = await model.generateContent(`improve this prompt so image generating ai can give me exactly what i want  "${prompt}"`);
+    console.log(result)
     const response = await result.response;
     const text = response.text();
     console.log(text);
