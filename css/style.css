@@ -1,6 +1,6 @@
 body{
     /* background-color: black; */
-    background-image: url("images/bg.jpeg");
+    background-image: url("/images/bg.jpeg");
     flex-direction: column-reverse;
     display: flex;
     overflow: hidden;
