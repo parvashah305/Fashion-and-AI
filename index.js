@@ -15,7 +15,7 @@ async function run(prompt) {
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
     const result = await model.generateContent(`improve this prompt so image generating ai can give me exactly what i want  "${prompt}"`);
-    console.log(result)
+    console.log(`improve this prompt so image generating ai can give me exactly what i want  "${prompt}"`)
     const response = await result.response;
     const text = response.text();
     console.log(text);
