@@ -32,7 +32,7 @@ body{
     margin: auto;
 }
 
-#divInput input{
+#divInput textarea{
     height: 100px;
     width: 700px;
     font-size: 20px;
@@ -44,4 +44,5 @@ body{
   border-radius: 20px;
   text-align: center;
   border-style: none;
+  color: black;
 }
