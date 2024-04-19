@@ -132,3 +132,7 @@ body {
 #fair{
   background-color: #ffdbac;
 }
+
+#sendPrompt{
+  cursor: pointer;
+}

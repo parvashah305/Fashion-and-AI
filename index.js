@@ -1,0 +1,25 @@
+import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai"
+
+const genAI = new GoogleGenerativeAI("AIzaSyAcEKsBcd3fOtWHx97mjD9Z8N5N_SEmZ_g");
+
+const promptInput = document.getElementById("prompt");
+const sendPromptBtn = document.getElementById("sendPrompt");
+
+async function run(prompt) {
+    // For text-only input, use the gemini-pro model
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+
+    const result = await model.generateContent(prompt);
+    const response = await result.response;
+    const text = response.text();
+    console.log(text);
+}
+
+sendPromptBtn.addEventListener("click", ()=>{
+    run(promptInput.value);
+})
+promptInput.addEventListener("keydown", (event)=>{
+    if (event.key === "Enter" && (event.ctrlKey || event.metaKey)) {
+        run(promptInput.value);
+    }
+})
