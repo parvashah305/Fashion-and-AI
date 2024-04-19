@@ -52,7 +52,11 @@ body {
   bottom: 2%;
 }
 
-#prompt {
+#promptArea{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -62,7 +66,29 @@ body {
   text-align: center;
   border-style: none;
   color: black;
+  background-color: white;
+  padding: 10px;
 }
+
+#prompt{
+  height: 100%;
+  width: 100%;
+  border: 0px;
+  resize: none;
+  outline: none;
+  -webkit-box-shadow: none
+}
+/* #prompt {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  border: 1px solid black;
+  border-radius: 20px;
+  text-align: center;
+  border-style: none;
+  color: black;
+} */
 
 #colorSlider{
   display: flex;
