@@ -1,9 +1,23 @@
 body {
   /* background-color: black; */
-  background-image: url("/assets/bg.jpeg");
+  background-image: url("/assets/bg1.jpg");
   overflow: hidden;
   /* background: no-repeat; */
   background-size: cover;
+}
+
+.logo img{
+    height: 70px;
+    margin-left: 21px;
+    margin-bottom: -11px;
+    margin-top: 10px;
+}
+
+.logo{
+    color: white;
+    font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 
@@ -17,6 +31,10 @@ body {
   font-weight: 700;
   font-style: normal;
   font-size: 34px;
+  text-align: center;
+  margin-left: 400px;
+  margin-top: -86px;
+  color: rgb(243, 243, 227);
 }
 
 /* #prompt {
