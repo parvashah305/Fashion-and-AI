@@ -1,45 +1,45 @@
-body{
-    /* background-color: black; */
-    background-image: url("/images/bg.jpeg");
-    flex-direction: column-reverse;
-    display: flex;
-    overflow: hidden;
-    /* background: no-repeat; */
-    background-size: cover;
+body {
+  /* background-color: black; */
+  background-image: url("/images/bg.jpeg");
+  flex-direction: column-reverse;
+  display: flex;
+  overflow: hidden;
+  /* background: no-repeat; */
+  background-size: cover;
 }
 
 
-.heading{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    width: 50%;
-    font-family: "Poppins", sans-serif;
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 50%;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 34px;
 }
 
-#prompt{
-    position: absolute;
-    bottom: 0;
-}
-#divInput{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: auto;
+/* #prompt {
+  position: absolute;
+  bottom: 0;
+} */
+
+#divInput {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  bottom: 2%;
 }
 
-#divInput textarea{
-    height: 100px;
-    width: 700px;
-    font-size: 20px;
-    font-family: "Poppins", sans-serif;
+#prompt {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
-  margin-bottom: 290px;
   border: 1px solid black;
   border-radius: 20px;
   text-align: center;
