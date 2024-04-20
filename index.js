@@ -56,15 +56,42 @@ async function run(prompt) {
         return;
     }
 
-    const result = await model.generateContent(`improve this prompt so image generating ai can give me exactly what i want  "${prompt}"`);
-    console.log(`improve this prompt so image generating ai can give me exactly what i want, "${prompt}, in ${cp.value} color, with ${clickedDiv.id} skin tone"`)
+    prompt = `improve this prompt so image generating ai can give me exactly what i want, "${prompt}, in ${cp.value} color, with ${clickedDiv.id} skin tone"`
+
+    const result = await model.generateContent(prompt);
+    console.log(prompt)
     const response = await result.response;
     const text = response.text();
     console.log(text);
 
-    // Hide loading Overlay
-    document.getElementById("loadingOverlay").style.display = "none";
-    promptInput.focus();
+    console.log("image started")
+
+    const options = {
+        method: "POST",
+        url: "https://api.edenai.run/v2/image/generation",
+        headers: {
+            authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNzI3YjVkMDEtMDdkYi00Y2NjLTlhMGUtY2ZmNTEwMzBkYTIxIiwidHlwZSI6ImFwaV90b2tlbiJ9.rbuGnb9YBhlzgmuVVweH08CLpUD90XAf7MXwmKh01fM",
+        },
+        data: {
+            providers: "openai",
+            text: text,
+            resolution: "1024x1024",
+            fallback_providers: "",
+        },
+    };
+
+    axios
+        .request(options)
+        .then((response) => {
+            console.log(response.data);
+            // Hide loading Overlay
+            document.getElementById("loadingOverlay").style.display = "none";
+            promptInput.focus();
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+
 }
 
 sendPromptBtn.addEventListener("click", () => {
